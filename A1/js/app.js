@@ -11,7 +11,7 @@ let resultText = document.getElementById("resultText");
 //DATA
 let playerRoll = 0;
 let aiRoll = 0;
-
+let winner = 0;
 
 
 //Process
@@ -45,7 +45,7 @@ function result() {
 }
 
   function showResult () {
-    resultText.innerHTML = "Result: " + resultText;
+    result = "Result: " + winner;
   }
 function showPlayerRollResult() {
   playerRollText.innerHTML = "Player " + playerRoll;

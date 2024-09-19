@@ -17,41 +17,39 @@ let aiRoll = 0;
 //Process
 button0.addEventListener("click", function() {
   getRandomNumberPlayer();
-  getRandomNumberAI();
+  getRandomNumberAi();
   showPlayerRollResult();
-  showComputerRollResult();
+  showAiRollResult();
   showResult();
-});
+
+})
 
 //CONTROLLER
 function getRandomNumberPlayer() {
-  playerRoll = Math.floor(Math.random() * 6) + 1;
+  playerRoll = Math.floor(Math.random() * 6) + 1
 
 }
-function getRandomNumberAI() {
-  aiRoll = Math.floor(Math.random() * 6) + 1;
+function getRandomNumberAi() {
+  aiRoll = Math.floor(Math.random() * 6) + 1
+}
+function result() {
+  if (aiRoll > playerRoll) {
+    resultText = "AI Wins";
+  }
+  else if (playerRoll > aiRoll) {
+    resultText = "Player Wins";
+  }
+  else {
+    resultText = "It's a draw";
+  }
+}
 
-if (aiRoll > playerRoll) {
-  resultText = ("AI Wins");
-}
- else if (playerRoll > aiRoll) {
-  showAiRollResult("Player Wins");
-}
-    else if (aiRoll === playerRoll) {
-      showAiRollResult("It's a draw");
-}
-
-//VIEWS
-}
-function showAiRollResult() {
-  aiRollText.innerHTML = aiRoll;
- }
   function showResult () {
-    resultText.innerHTML = text;
+    resultText.innerHTML = "Result: " + resultText;
   }
 function showPlayerRollResult() {
-  playerRollText.innerHTML = playerRoll;
+  playerRollText.innerHTML = "Player " + playerRoll;
 }
-function showComputerRollResult() {
- aiRollText.innerHTML = aiRoll;
+function showAiRollResult() {
+ aiRollText.innerHTML = "AI " + aiRoll;
 }

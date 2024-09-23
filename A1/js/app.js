@@ -45,7 +45,7 @@ function result() {
 }
 
   function showResult () {
-    result = "Result: " + winner;
+    resultText = "Result: " + winner;
   }
 function showPlayerRollResult() {
   playerRollText.innerHTML = "Player " + playerRoll;
